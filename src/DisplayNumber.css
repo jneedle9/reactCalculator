@@ -1,0 +1,38 @@
+.result-box {
+	background-color: rgb(238, 235, 235);
+	position: relative;
+	display: flex;
+	width: 400px;
+	height: 50px;
+	bottom: 3px;
+	border-radius: 5px;
+}
+.savedNum {
+	position: relative;
+	display: flex;
+	font-weight: bold;
+	font-size: 175%;
+	justify-content: left;
+	align-self: center;
+	color: rgb(108, 104, 104);
+}
+.operation {
+	position: relative;
+	display: flex;
+	font-weight: bold;
+	font-size: 175%;
+	justify-content: left;
+	align-self: center;
+	left: 10px;
+	color: rgb(108, 104, 104);
+}
+.result {
+	position: relative;
+	display: flex;
+	font-weight: bold;
+	font-size: 175%;
+	justify-content: flex-end;
+	right: 10px;
+	flex-grow: 4;
+	align-self: center;
+}

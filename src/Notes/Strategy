@@ -1,0 +1,20 @@
+
+
+
+When should I use setState vs useState hook?
+ - useState for state we maintain locally, make sure it goes in a function
+ - setState and pass it through context for state we don't need locally
+    . in the case of this program:
+     - The state maintaining the current number and saved numbers need to be shared through context
+     - I don't think the operations components (addition and such) really need a state, they just have to be able to access and create new state
+
+- The way I'm currently handling equality seems unnecessarily complicated but there does need to be a way
+    - Ideally, the number displayed shouldn't be updated until "=" is pressed
+      . How do we reconcile this with how we want operation components to work?
+       - 5 pressed, + saves 5, takes in the next number?
+         - Currently works like: = is pressed, tests state for addition etc and calculates based on that
+         - alternate way: 5 pressed, plus pressed, 5 saved, state -> 0 -> five pressed -> saved becomes 10 -> = -> state -> 10 
+         ** new problem with more than one digit numbers: it works when first put in but when you press an operation it only adds first digit of next number entered 
+         What if we don't update until operation is changed or '=' is pressed? -- will have to rework how '=' works and operations too
+
+                        
